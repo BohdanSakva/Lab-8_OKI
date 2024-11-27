@@ -1,0 +1,186 @@
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя сторінка</title>
+
+    <style>
+        body {
+            font-family: 'Comic Sans MS',sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #dfdfdf;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h1, h2 {
+            color: #000000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p, table {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .button-container a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 15px;
+            font-size: 1.2em;
+            background-color: #4b4b4b;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button-container a:hover {
+            background-color: #ffc107;
+            color: #000000;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #000000;
+            border-radius: 10px;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ff9800;
+            color: #121212;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #1e1e1e;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #333;
+        }
+
+        tr:hover td {
+            background-color: #444;
+        }
+    </style>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Секція "Про мене" -->
+        <div id="about" class="section active">
+            <h1>Привіт! Мене звати Богдан Саква</h1>
+            <p>Я народився 2007 року в мальовничому селі Стиборівка. З дитинства займався футболом, люблю настільні і відео ігри бо як без цього.
+                Мене завжди цікавила техніка в часності комп'ютери, і завжди якомога хотів дізнатися більше для чого поступив...</p>
+            <p>До Тернопільського національного технічного університету імені Полюя, де зараз навчаюся на факультеті ФІЗ на Комп'ютерного інженера. Мені подобається вирішувати технічні завдання та вивчати нові підходи, які допомагають мені дізнаватися чогось нового.</p>
+        </div>
+
+        <!-- Секція "Завдання" -->
+<div id="tasks" class="section">
+    <h2>Завдання: Таблиця валют</h2>
+    <table>
+        <tr>
+            <th style="background-color: #4b4b4b; color: #ffffff;">№ валюти</th>
+            <th style="background-color: #4b4b4b; color: #ffffff;">Валюта</th>
+            <th style="background-color: #4b4b4b; color: #ffffff;">Курс</th>
+        </tr>
+        <tr>
+            <td style="background-color: #b2b2b2; color: #000000;">0</td>
+            <td style="background-color: #b2b2b2; color: #000000;">UAH</td>
+            <td style="background-color: #b2b2b2; color: #000000;">1</td>
+        </tr>
+        <tr>
+            <td style="background-color: #8e8e8e; color: #000000;">1</td>
+            <td style="background-color: #8e8e8e; color: #000000;">USD</td>
+            <td style="background-color: #8e8e8e; color: #000000;">41.05</td>
+        </tr>
+        <tr>
+            <td style="background-color: #b2b2b2; color: #000000;">2</td>
+            <td style="background-color: #b2b2b2; color: #000000;">EUR</td>
+            <td style="background-color: #b2b2b2; color: #000000;">43.35</td>
+        </tr>
+        <tr>
+            <td style="background-color: #8e8e8e; color: #000000;">3</td>
+            <td style="background-color: #8e8e8e; color: #000000;">GBP</td>
+            <td style="background-color: #8e8e8e; color: #000000;">52.73</td>
+        </tr>
+        <tr>
+            <td style="background-color: #b2b2b2; color: #000000;">4</td>
+            <td style="background-color: #b2b2b2; color: #000000;">JPY</td>
+            <td style="background-color: #b2b2b2; color: #000000;">0.267</td>
+        </tr>
+        <tr>
+            <td style="background-color: #8e8e8e; color: #000000;">5</td>
+            <td style="background-color: #8e8e8e; color: #000000;">AUD</td>
+            <td style="background-color: #8e8e8e; color: #000000;">26.69</td>
+        </tr>
+    </table>
+</div>
+
+
+        <!-- Секція "Спів Автори" -->
+        <div id="team" class="section">
+            <h1>Команда</h1>
+            <div class="author-section">
+                <h2>Віталік Стрехалюк</h2>
+                <p>Я народився 2007 в селі Лукаші. Також навчаюся в Тернопільському національному технічному університеті імені Полюя. Люблю техніку і завжди хочу дізнатися чогось нового.</p>
+            </div>
+            <div class="author-section">
+                <h2>Володимир Юрків</h2>
+                <p>Народився в селі Гуштин в 2007 році. На даний момент навчаюся ТНТУ імені Полюя на Комп'ютерного інженера. Серед хобі, цікавлюся новими технологіями також люблю точні науки.</p>
+            </div>
+        </div>
+
+        <!-- Кнопки навігації -->
+        <div class="button-container">
+            <a href="#" onclick="showSection('about'); return false;">Про мене</a>
+            <a href="#" onclick="showSection('tasks'); return false;">Завдання</a>
+            <a href="#" onclick="showSection('team'); return false;">Спів Автори</a>
+        </div>
+    </div>
+</body>
+
+</html>
